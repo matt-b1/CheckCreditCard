@@ -30,12 +30,12 @@ function validateCred(card) {
     for (let i = card.length - 1; i >= 0; i--) {
         double ++;
         let current = card[i];
-        if (double === 2) {
+        if (double % 2 === 0) {
             current *= 2;
             if (current > 9) {
                 current -= 9;
             }
-            double = 0;
+//             double = 0;
         }
         //console.log(card[i]);
         sum += current;
